@@ -25,6 +25,7 @@ import React, { useState } from 'react'
 import { BsPersonFill } from 'react-icons/bs';
 import { FaGlobeAmericas } from 'react-icons/fa';
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -38,41 +39,48 @@ const Navbar = () => {
 
       <Show above="md">
         <Flex>
-          <Box p='4' >
-            <Image src={bitrix24} />
-          </Box>
+          <Link to="/">
+            <Image src="https://i.im.ge/2022/10/02/1WNqza.Screenshot-4.png" />
+          </Link>
           <Spacer />
           <HStack p='4'>
             <Box mr="9rem">
-              <HStack spacing='24px'>
-                <Box h='40px' fontWeight="bold" >
-                  TOOLS
+              <HStack spacing='20px'>
+                <Box h='40px' fontWeight="bold"  >
+                  <Link>  TOOLS</Link>
+
                 </Box>
                 <Box h='40px' fontWeight="bold" >
-                  PRICING
+                  <Link to="/home"> PRICING</Link>
+
                 </Box>
                 <Box h='40px' fontWeight="bold" >
-                  SOLUTIONS
+                  <Link>SOLUTIONS</Link>
+
                 </Box>
                 <Box h='40px' fontWeight="bold" >
-                  PARTNERS
+                  <Link>PARTNERS</Link>
+
                 </Box>
                 <Box h='40px' fontWeight="bold" >
-                  APPS
+                  <Link> APPS</Link>
+
                 </Box>
                 <Box h='40px' fontWeight="bold" >
-                  BLOG
+                  <Link>BLOG</Link>
+
                 </Box>
                 <Box h='40px' fontWeight="bold" >
-                  SUPPORT
+                  <Link> SUPPORT</Link>
+
                 </Box>
               </HStack>
             </Box>
 
             <Box>
               <HStack spacing='24px'>
-                <Box pt="0.3rem" pb="0.3rem" pl="1.3rem" pr="1.3rem" color="#525C69" bgColor="#bdf300" borderRadius="30px" >
-                  START FOR FREE
+                <Box fontSize="10px" pt="0.3rem" pb="0.3rem" pl="1.3rem" pr="1.3rem" color="#525C69" bgColor="#bdf300" borderRadius="30px" >
+                  <Link to="/register" > START FOR FREE</Link>
                 </Box>
                 <Box h="40px">
 
@@ -80,7 +88,9 @@ const Navbar = () => {
                     <MenuButton>
                       <HStack>
                         <Box><BsPersonFill /></Box>
-                        <Box>LOG IN</Box>
+                        <Box fontSize="10px">
+                         LOG IN
+                        </Box>
                       </HStack>
                     </MenuButton>
                     <MenuList>
@@ -91,7 +101,9 @@ const Navbar = () => {
                       <Text fontSize="19px">your company's Bitrix24.</Text>
 
                       <HStack >
-                        <Box borderRadius="20px" ml="1rem" p="0.4rem" bgColor="#00aeef" >ENTER</Box>
+                        <Box borderRadius="20px" ml="1rem" p="0.4rem" bgColor="#00aeef" >
+                        <Link to="/login" >ENTER</Link>
+                          </Box>
                         <Box></Box>
                       </HStack>
                       <Text>Don't have Bitrix24 yet?</Text>
@@ -102,7 +114,7 @@ const Navbar = () => {
                 <Box h='40px' >
                   <Menu isLazy>
                     <MenuButton>
-                      <HStack>
+                      <HStack fontSize="10px">
                         <Box> <FaGlobeAmericas />  </Box>
                         <Box>{len}</Box>
                       </HStack>
@@ -182,21 +194,23 @@ const Navbar = () => {
             </HStack>
             <Center>
               <DrawerBody>
-                <Box>TOOLS</Box>
-                <Box>PRICING</Box>
-                <Box>SOLUTIONS</Box>
-                <Box>PARTERS</Box>
-                <Box>APPS</Box>
-                <Box>BLOG</Box>
-                <Box>SUPPORT</Box>
+                <Box textAlign="center" >TOOLS</Box>
+                <Box textAlign="center" >PRICING</Box>
+                <Box textAlign="center" >SOLUTIONS</Box>
+                <Box textAlign="center" >PARTERS</Box>
+                <Box textAlign="center" >APPS</Box>
+                <Box textAlign="center" >BLOG</Box>
+                <Box textAlign="center" >SUPPORT</Box>
                 <HStack>
                   <Box fontSize="10px" pt="0.3rem" pb="0.3rem" pl="1.3rem" pr="1.3rem" color="#525C69" bgColor="#bdf300" borderRadius="30px" >
-                    START FOR FREE
+                   <Link to="/register" >START FOR FREE</Link>
                   </Box>
                   <Box>
                     <HStack>
                       <Box><BsPersonFill /></Box>
-                      <Box fontSize="12px" >LOG IN</Box>
+                      <Box fontSize="12px" >
+                        <Link to="/login" >LOG IN</Link>
+                        </Box>
                     </HStack>
                   </Box>
                   <Box></Box>

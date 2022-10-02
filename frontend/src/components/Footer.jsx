@@ -1,12 +1,12 @@
 import React from 'react'
 import { Box, Text, Flex, HStack, Spacer , Image, Input } from '@chakra-ui/react'
 import appStore  from '../Image/appStore.png'
-
+import { FaFacebookF , FaYoutube , FaInstagram, FaLinkedinIn , FaPinterestP } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <Box bgColor="#00aeef">
-      <Box width="80%" m="auto" >
+    <Box bgColor="#00aeef" color="white">
+      <Box width="80%" m="auto" pt="2rem" pb="2rem" >
         <Flex justify="space-between" >
           <Box>
             <Text>Bitrix24</Text>
@@ -68,7 +68,7 @@ const Footer = () => {
           <Box>
             <HStack>
               <Box>
-              <Image src={appStore} />
+              <Image w="20rem" src={appStore} />
               </Box>
             </HStack>
           </Box>
@@ -78,13 +78,23 @@ const Footer = () => {
           <Spacer />
           <Box>
             <HStack>
-              <Box>A</Box>
-              <Box>B</Box>
-              <Box>C</Box>
-              <Box>D</Box>
-              <Box>E</Box>
+              <Box> 
+                < FaFacebookF/>
+              </Box>
+              <Box> 
+                < FaYoutube />
+              </Box>
+              <Box> 
+                < FaInstagram/>
+              </Box>
+              <Box> 
+                < FaLinkedinIn/>
+              </Box>
+              <Box> 
+                < FaPinterestP/>
+              </Box>
               <Box>
-              <Input placeholder='Basic usage' borderRadius="20px" />
+              <Input placeholder='Search' borderRadius="20px" />
               </Box>
             </HStack>
           </Box>

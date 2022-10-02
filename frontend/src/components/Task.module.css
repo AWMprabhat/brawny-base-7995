@@ -1,0 +1,20 @@
+.options>option{
+   width: 15rem; 
+}
+
+.bgimage{
+    background-image: url("https://b24-chnk01.bitrix24.in/bitrix/templates/bitrix24/themes/light/atmosphere/atmosphere2.jpg");
+    background-size: cover;
+    height: 100vh;
+    color: black;
+    font-weight: bolder;
+    
+}
+
+.opa{
+    opacity: 0.4;
+}
+
+.colors{
+    background-color:  #b4e624;
+}
