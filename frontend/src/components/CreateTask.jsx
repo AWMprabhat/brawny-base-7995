@@ -50,9 +50,7 @@ const CreateTask = () => {
   const [employeeName, setEmployeeName] = useState("");
   const [isTaskCreated, setIsTaskCreated] = useState("");
   const navigate = useNavigate();
-   
-
-  const handleStartCalendar = () => {
+     const handleStartCalendar = () => {
     setIsStartCalendarOpen(!isStartCalendarOpen);
   };
 
@@ -81,7 +79,10 @@ const CreateTask = () => {
       body: JSON.stringify(task),
     })
       .then((res) => res.json())
-      .then((res) => setIsTaskCreated(res.message));
+      .then((res) => {
+        setIsTaskCreated(res.message)
+       
+      })
   };
 
   const handleAddEmployee = (name) => {

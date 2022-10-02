@@ -37,7 +37,7 @@ const Task = () => {
         
         setTask(res)
       });
-    },[])
+    },[task])
     console.log(task)
   return (
     <Box className={styles.bgimage}>
